@@ -12,7 +12,11 @@ jobs:
       - name: Clonar repositorio
         uses: actions/checkout@v4
 
-      - name: Dar privilegios y ejecutar los scripts
+      - name: Dar permisos de ejecucion..
         run: |
-          chmod +x scripts/info.sh
+          chmod +x scripts/*.sh
+
+      - name: Ejecutar los scripts
+        run: |
           ./scripts/info.sh
+          ./scripts/deploy.sh
