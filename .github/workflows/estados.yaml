@@ -9,9 +9,9 @@ jobs:
   check-status:
     runs-on: ubuntu-latest
     steps:
-      - name: Primer paso incorrecto..
-        run: exit 1
+      - name: Simular un proceso extenso
+        run: sleep 60
       
-      - name: Step despues del step fallido (Notificaciones..)
-        if: failure()
-        run: echo "Mensaje del segundo step despues de que fuerce el error..."
+      - name: Registrar cancelacion
+        if: cancelled()
+        run: echo "El workflow ha sido cancelado..."
