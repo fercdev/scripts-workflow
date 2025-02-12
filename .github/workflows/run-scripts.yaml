@@ -33,6 +33,6 @@ jobs:
           SEGUNDO: "otro valor"
 
       - name: Pintar variables del workflow...
-        run: echo "$JOB_MESSAGE , $NAME , $GLOBAL_MESSAGE"
+        run: echo "$JOB_MESSAGE , $NAME , $GLOBAL_MESSAGE , ${{ vars.API_URL }}"
         env:
           NAME: "Fernando"
