@@ -9,9 +9,9 @@ jobs:
   check-status:
     runs-on: ubuntu-latest
     steps:
-      - name: Primer paso correcto..
-        run: echo "Hello world..."
+      - name: Primer paso incorrecto..
+        run: exit 1
       
-      - name: Step despues del step correcto
-        if: success()
-        run: echo "Mensaje del segundo step correcto..."
+      - name: Step despues del step fallido (Notificaciones..)
+        if: failure()
+        run: echo "Mensaje del segundo step despues de que fuerce el error..."
