@@ -8,5 +8,6 @@ if [ -z "$MENSAJE" ]; then
 fi
 
 echo "Valor de mensaje recibido: $MENSAJE"
+echo "Valor del mensaje2: $SEGUNDO"
 
 echo finalizando script.

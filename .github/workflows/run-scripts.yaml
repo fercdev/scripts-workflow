@@ -22,4 +22,5 @@ jobs:
           ./scripts/deploy.sh
           ./scripts/message.sh
         env:
-          MENSAJE2: "Valor pasado desde el workflow!..."
+          MENSAJE: "Valor pasado desde el workflow!..."
+          SEGUNDO: "otro valor"
