@@ -2,7 +2,7 @@
 
 echo "Inicio del script message.sh....."
 
-if [ -Z "$MENSAJE" ]; then
+if [ -z "$MENSAJE" ]; then
   echo "NO existe la variable del MENSAJE"
   exit 1
 fi
