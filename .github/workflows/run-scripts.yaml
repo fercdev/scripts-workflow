@@ -16,11 +16,14 @@ jobs:
         run: |
           chmod +x scripts/*.sh
 
-      - name: Ejecutar los scripts
-        run: |
-          ./scripts/info.sh
-          ./scripts/deploy.sh
-          ./scripts/message.sh
+      - name: Ejecutar script de informacion..
+        run: ./scripts/info.sh
+      
+      - name: Ejecutar script de deploy..
+        run: ./scripts/deploy.sh
+
+      - name: Ejecutar script message...
+        run: ./scripts/message.sh
         env:
           MENSAJE: "Valor pasado desde el workflow!..."
           SEGUNDO: "otro valor"
