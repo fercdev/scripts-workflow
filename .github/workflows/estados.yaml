@@ -11,9 +11,7 @@ jobs:
     steps:
       - name: Primer paso correcto..
         run: echo "Hello world..."
-
-      - name: Primer paso correcto..
-        run: exit 1
       
-      - name: Step despues del error
-        run: echo "Mensaje de error..."
+      - name: Step despues del step correcto
+        if: success()
+        run: echo "Mensaje del segundo step correcto..."
