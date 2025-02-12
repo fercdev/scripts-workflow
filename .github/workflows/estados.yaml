@@ -9,9 +9,9 @@ jobs:
   check-status:
     runs-on: ubuntu-latest
     steps:
-      - name: Simular un proceso extenso
-        run: sleep 60
+      - name: Simular un error
+        run: exit 1
       
-      - name: Registrar cancelacion
-        if: cancelled()
-        run: echo "El workflow ha sido cancelado..."
+      - name: Ejecutar step de notificacion
+        if: always()
+        run: echo "El workflow finalizo..."
