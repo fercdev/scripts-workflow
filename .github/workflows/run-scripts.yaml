@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master 
+env:
+  GLOBAL_MESSAGE: "Mensaje a nivel de todo el workflow.."
 
 jobs:
   run-scripts:
@@ -31,6 +33,6 @@ jobs:
           SEGUNDO: "otro valor"
 
       - name: Pintar variables del workflow...
-        run: echo "$JOB_MESSAGE , $NAME"
+        run: echo "$JOB_MESSAGE , $NAME , $GLOBAL_MESSAGE"
         env:
           NAME: "Fernando"
