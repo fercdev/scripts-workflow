@@ -3,7 +3,7 @@ name: Workflow to check status
 on: 
   push:
     branches:
-      - master 
+      - develop 
 
 jobs:
   check-status:

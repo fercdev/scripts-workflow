@@ -3,7 +3,7 @@ name: Workflow to run scripts
 on: 
   push:
     branches:
-      - master 
+      - develop 
 env:
   GLOBAL_MESSAGE: "Mensaje a nivel de todo el workflow.."
 
