@@ -20,3 +20,6 @@ jobs:
         run: |
           ./scripts/info.sh
           ./scripts/deploy.sh
+          ./scripts/message.sh
+        env:
+          MENSAJE: "Valor pasado desde el workflow!..."
