@@ -36,3 +36,13 @@ jobs:
         run: echo "$JOB_MESSAGE , $NAME , $GLOBAL_MESSAGE , ${{ vars.API_URL }}"
         env:
           NAME: "Fernando"
+
+      - name: Valores del workflow...
+        run: |
+          echo "Tipo de evento: ${{ github.event_name }}"
+          echo "Nombre de repositorio: ${{ github.repository }}"
+          echo "Rama: ${{ github.ref }}"
+          echo "Commit HASH: ${{ github.sha }}"
+          echo "Usuario que lanzo el workflow: ${{ github.actor }}"
+          echo "Nro ejecucion workflow: ${{ github.run_number }}"
+          echo "Mensaje de commit: ${{ github.event.head_commit.message }}"
