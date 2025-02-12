@@ -1,0 +1,19 @@
+name: Workflow to check status
+
+on: 
+  push:
+    branches:
+      - master 
+
+jobs:
+  check-status:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Primer paso correcto..
+        run: echo "Hello world..."
+
+      - name: Primer paso correcto..
+        run: exit 1
+      
+      - name: Step despues del error
+        run: echo "Mensaje de error..."
